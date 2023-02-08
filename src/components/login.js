@@ -91,34 +91,41 @@ const Sign_in = styled.button`
 
 const Page = styled.div`
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    width: 100%;
     & > img{
         position: absolute;
         height: 700px;
         right: -60px;
-        @media(max-width: 700px){
+        @media(max-width: 768px){
             position: initial;
             width:100%;
             object-fit: contain;
         }
+    }
+    @media(max-width: 768px){
+        flex-direction: column;
     }
 `
 
 const Form = styled.div`
 padding-top: 30px;
 padding-left: 60px;
+display: block;
 @media (max-width: 700px) {
         padding: 40px 10px;
+        display: block;
+        text-align: center;
     }
     `
 
 const Hero = styled.div`
     font-weight: 15;
     font-size: 55px;
+    /* margin: auto; */
     width: 60%;
     color: rgb(143,88,73);
-    @media (max-width: 700px) {
-        text-align: center;
+    @media (max-width: 768px) {
         width: 100%;
         font-size: 30px;
     }
@@ -144,6 +151,7 @@ const Google = styled.button`
     }
     @media (max-width: 700px) {
         margin: auto;
+        width: initial;
     }
 `
 

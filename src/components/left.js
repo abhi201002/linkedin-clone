@@ -77,7 +77,8 @@ const Photo = styled.div`
     `
 const ArtCard = styled.div`
     background-color: white;
-    `
+    border: 0.1px solid white;
+`
 
 const Profile = styled.div`
     a{
@@ -100,7 +101,7 @@ const Profile = styled.div`
 
 const Widget = styled.div`
     padding: 0px 10px;
-    a{
+    & > a{
         :first-child{
             display: flex;
             flex-direction: row;
@@ -125,6 +126,7 @@ const Widget = styled.div`
             }
         }
         :last-child{
+            margin: 15px 0px;
             display: flex;
             flex-direction: row;
             justify-content: flex-start;

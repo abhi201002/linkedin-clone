@@ -135,6 +135,7 @@ const Post = styled.div`
   width: 100%;
   margin: 10px 0px;
   padding: 10px 0px;
+  box-sizing: border-box;
   & > img{
     /* :first-child{ */
       object-fit: contain;
@@ -200,6 +201,8 @@ const Counts = styled.div`
 `
 
 const Social = styled.div`
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -211,6 +214,8 @@ const Social = styled.div`
     color:rgb(94,94,94);
     background-color: transparent;
     border: none;
+    /* box-sizing: border-box; */
+    /* width: 100%; */
     padding: 10px 5px;
     div{
         margin-left: 14px;

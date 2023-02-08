@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import HomeIcon from '@mui/icons-material/Home';
 import PeopleIcon from '@mui/icons-material/People';
 import WorkIcon from '@mui/icons-material/Work';
 import TextsmsIcon from '@mui/icons-material/Textsms';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ListIcon from '@mui/icons-material/List';
 import styled from 'styled-components'
 import { connect } from 'react-redux';
@@ -64,7 +63,6 @@ function Header(props) {
 
 
 const Nav = styled.div`
-    padding: 5px 60px;
     /* width: 100%; */
     display: flex;
     /* background-color: red; */
@@ -73,6 +71,7 @@ const Nav = styled.div`
 `
 
 const Search = styled.div`
+    padding: 5px 60px;
     display: flex;
     justify-content: flex-start;
     /* width: 45%; */
@@ -87,12 +86,25 @@ const Search = styled.div`
         background-color: rgb(238,243,248);
         padding: 0px 20px;
     }
+    @media(max-width: 768px){
+        margin: auto;
+    }
 `
 
 const Option = styled.div`
+    padding: 5px 60px;
     display: flex;
+    background-color: white;
     width: 55%;
     justify-content: space-between;
+    @media(max-width: 768px){
+        position: fixed;
+        z-index: 999;
+        padding: 0px 10px;
+        bottom:0px;
+        width: 100%;
+        box-sizing: border-box;
+    }
 `
 
 const SignOut = styled.button`
@@ -106,6 +118,11 @@ const SignOut = styled.button`
     :hover{
         cursor: pointer;
     }
+    @media(max-width: 768px){
+        position: absolute;
+        top:-35px;
+        /* bottom: 00px; */
+    }
 `
 const OptionItem = styled.div`
     color: rgb(102,102,102);
@@ -114,7 +131,7 @@ const OptionItem = styled.div`
     text-align: center;
     flex-direction: column;
     align-items: center;
-    margin-right: 20px;
+    margin: 0px 10px;
     img{
         border-radius: 50%;
         width: 25px;
@@ -125,6 +142,9 @@ const OptionItem = styled.div`
                 display: flex;
             }
         }
+    }
+    @media (max-width: 768px){
+        margin: 0px;
     }
 `
 
