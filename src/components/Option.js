@@ -18,10 +18,14 @@ const Container = styled.button`
     font-weight: 500;
     color:rgb(94,94,94);
     background-color: transparent;
+    word-wrap: normal;
     border: none;
+    box-sizing: border-box;
+    /* border-left: 0.5px solid grey;
+    border-right: 0.5px solid grey; */
     padding: 10px 5px;
     div{
-        margin-left: 14px;
+        /* margin-left: 14px; */
     }
     :hover{
         background-color: rgb(94,94,94,0.2);

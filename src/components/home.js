@@ -53,7 +53,7 @@ const Text = styled.div`
 
 const Content = styled.div`
     /* background-color: red; */
-    overflow: auto;
+    /* overflow: auto; */
     display: grid;
     grid-template-areas : "left main right";
     grid-template-columns: minmax(0, 5fr) minmax(0, 12fr) minmax(300px, 7fr);

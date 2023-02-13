@@ -26,34 +26,34 @@ function Header(props) {
         <Option>
             <OptionItem>
                 <HomeIcon/>
-                Home
+                <div>Home</div> 
             </OptionItem>
             <OptionItem>
                 <PeopleIcon/>
-                My Network
+                <div>My Network</div> 
             </OptionItem>
             <OptionItem>
                 <WorkIcon/>
-                Jobs
+                <div>Jobs</div> 
             </OptionItem>
             <OptionItem>
                 <TextsmsIcon/>
-                Messaging
+                <div>Messaging</div> 
             </OptionItem>
             <OptionItem>
                 <NotificationsIcon/>
-                Notification
+                <div>Notification</div> 
             </OptionItem>
             <OptionItem>
                 {props?.user && props?.user?.photoURL ? <img src={props?.user?.photoURL} alt="hjhj" /> : <img src="./images/user.svg" alt="" />}
-                {props?.user?.displayName}
+                <div>{props?.user?.displayName}</div> 
                 <SignOut onClick={() => props.signOut()}>
                     Sign Out
                 </SignOut>
             </OptionItem>
             <OptionItem>
                 <ListIcon/>
-                Work
+                <div>Work</div> 
             </OptionItem>
         </Option>
     </Nav>
@@ -63,7 +63,6 @@ function Header(props) {
 
 
 const Nav = styled.div`
-    /* width: 100%; */
     display: flex;
     /* background-color: red; */
     align-items: center;
@@ -88,6 +87,11 @@ const Search = styled.div`
     }
     @media(max-width: 768px){
         margin: auto;
+        /* width: 100%; */
+        padding: 0px;
+        input{
+            padding-left: 20px;
+        }
     }
 `
 
@@ -145,6 +149,9 @@ const OptionItem = styled.div`
     }
     @media (max-width: 768px){
         margin: 0px;
+        &>div{
+            display: none;
+        }
     }
 `
 

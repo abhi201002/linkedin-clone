@@ -23,10 +23,7 @@ function Main(props) {
   }
   return (
 <>
-    {  props.article?.length === 0 ? 
-    (<p>No Feed</p>)
-    :
-    (<Container>
+    <Container>
       <Share>
         <div>
         {props?.user && props?.user?.photoURL ? <img src={props?.user?.photoURL} alt="" /> : <img src="./images/user.svg" alt="" />}
@@ -43,22 +40,22 @@ function Main(props) {
       {console.log(props.article)}
       {props.article?.map((article,key) =>{
         return(
-        <Post key = {key}>
+        <Post>
         <Info>
-          <img src={article?.action.image} alt="" />
+          {/* <img src={article?.action.image} alt="" /> */}
           <User>
-            <div>{article?.action.title}</div>
+            {/* <div>{article?.action.title}</div>
             <div>{article?.action.description}</div>
-            <div>{article?.action.date.toDate().toLocaleDateString()}</div>
+            <div>{article?.action.date.toDate().toLocaleDateString()}</div> */}
           </User>
           <div color='rgb(10,102,194)'>+Follow</div>
         </Info>
-        <div>{article?.description}</div>
+        {/* <div>{article?.description}</div>
         {article?.sharedImg ?
           (<img src={article?.sharedImg} alt="" />)
           :
           (<ReactPlayer width={"100%"} url = {article?.video}/>)
-        }
+        } */}
         <Counts>
           <img src="https://static.licdn.com/sc/h/8ekq8gho1ruaf8i7f86vd1ftt" alt="" />
           <img src="https://static.licdn.com/sc/h/41j9d0423ck1snej32brbuuwg" alt="" />
@@ -84,11 +81,10 @@ function Main(props) {
             <div>Send</div>
           </button>
         </Social>
-      </Post>)
-      })}
+      </Post>
+      )})}
       <PostModal status = {status} handle_click = {handle_click}/>
-    </Container>)
-    }
+    </Container>
 </>
   )
 }
@@ -100,6 +96,7 @@ const Container = styled.div`
 
 const Share = styled.div`
   background-color: white;
+  width: 100%;
   /* border: 2px solid red; */
   padding: 10px 0px;
   & > div{
@@ -107,6 +104,8 @@ const Share = styled.div`
       display: flex;
       justify-content: space-around;
       margin-top: 10px;
+      box-sizing: border-box;
+      margin: 0px 5px;
     }
     :first-child{
       display: flex;
@@ -207,23 +206,31 @@ const Social = styled.div`
   justify-content: space-around;
   align-items: center;
   padding-top: 5px;
+  box-sizing: border-box;
   button{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     color:rgb(94,94,94);
     background-color: transparent;
     border: none;
-    /* box-sizing: border-box; */
-    /* width: 100%; */
-    padding: 10px 5px;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 10px 5px;
     div{
-        margin-left: 14px;
+        margin-left: 10px;
     }
     :hover{
         background-color: rgb(94,94,94,0.2);
         border-radius: 4px;
         cursor: pointer;
+    }
+  }
+  @media(max-width: 768px){
+    button{
+      &>div{
+        display: none;
+      }
     }
   }
 `
