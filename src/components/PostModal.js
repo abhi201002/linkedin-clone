@@ -35,7 +35,7 @@ function PostModal(props) {
     const handle_change = (e) =>{
         const image = e.target.files[0];
         if(image == "" || image == undefined){
-            alert("Lauda mera!");
+            alert("Please Upload Valid Image");
             return;
         }
         setpic(image);

@@ -42,20 +42,20 @@ function Main(props) {
         return(
         <Post>
         <Info>
-          {/* <img src={article?.action.image} alt="" /> */}
+          <img src={article?.action.image} alt="" />
           <User>
-            {/* <div>{article?.action.title}</div>
+            <div>{article?.action.title}</div>
             <div>{article?.action.description}</div>
-            <div>{article?.action.date.toDate().toLocaleDateString()}</div> */}
+            <div>{article?.action.date.toDate().toLocaleDateString()}</div>
           </User>
           <div color='rgb(10,102,194)'>+Follow</div>
         </Info>
-        {/* <div>{article?.description}</div>
+        <div>{article?.description}</div>
         {article?.sharedImg ?
           (<img src={article?.sharedImg} alt="" />)
           :
           (<ReactPlayer width={"100%"} url = {article?.video}/>)
-        } */}
+        }
         <Counts>
           <img src="https://static.licdn.com/sc/h/8ekq8gho1ruaf8i7f86vd1ftt" alt="" />
           <img src="https://static.licdn.com/sc/h/41j9d0423ck1snej32brbuuwg" alt="" />
